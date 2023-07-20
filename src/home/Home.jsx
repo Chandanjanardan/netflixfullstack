@@ -1,9 +1,17 @@
 
+
 import "./home.css"
+import Navbar from '../componenet/Navbar'
+
 
 function Home() {
   return (
-    <div>Home</div>
+    <>
+    <Navbar/>
+    
+    
+    
+    </>
   )
 }
 
