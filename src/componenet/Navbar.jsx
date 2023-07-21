@@ -1,4 +1,4 @@
-import React from 'react'
+import {useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faAdn } from "@fortawesome/free-brands-svg-icons"
@@ -7,6 +7,24 @@ import { faAdn } from "@fortawesome/free-brands-svg-icons"
 import "./navbar.css"
 
 function Navbar() {
+   const loadScript = () => {
+      const script = document.createElement("script");
+      script.src = "https://otpless.com/auth.js";
+      script.id = "otplessIdScript"
+      document.body.appendChild(script);
+    }
+  useEffect(() => {
+    
+    loadScript()
+    window.otpless = (otplessUser) => {
+       
+      console.log(otplessUser)
+    };
+    return () => {
+      let scr = document.getElementById('otplessIdScript')
+      document.body.removeChild(scr);
+    };
+  }, []);
   return (
     <div className='navbar'>
         <div className="container">
@@ -20,6 +38,7 @@ function Navbar() {
             </div>
             <div className="right">
             <FontAwesomeIcon icon={faAdn} />
+            <div id='otpless' custom="true">otpless</div>
             
             </div>
         </div>
