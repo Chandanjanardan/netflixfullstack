@@ -17,7 +17,7 @@ window.onscroll=()=>{
     <div className={isScrolled ? "navbar scrolled":"navbar"}>
         <div className="container">
             <div className="left">
-                <img src='https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png'/>
+                <img  src='https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png'/>
                 <span>Homepage</span>
                 <span>Series</span>
                 <span>Movies</span>

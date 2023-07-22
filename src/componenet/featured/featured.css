@@ -8,3 +8,7 @@
     object-fit: cover;
     position: absolute;
 }
+.info img{
+    width: 100vw;
+    height: 100vh;
+}
